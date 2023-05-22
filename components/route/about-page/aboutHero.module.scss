@@ -1,0 +1,122 @@
+.aboutHero {
+  position: relative;
+  background-color: var(--black-bg);
+  padding: 42px 0 64px;
+  position: relative;
+  min-height: 80vh;
+  .container {
+    position: relative;
+  }
+
+  .content {
+    color: #fff;
+    margin-top: 6em;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 3.75em;
+    .aboutLogo {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      box-shadow: 1.9412px 2.5882px 10px 0 #00000030;
+      border-radius: 7.75px;
+      z-index: 0;
+      opacity: 0.2;
+
+      > div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .about {
+      &Facebook {
+        top: -65px;
+        right: 40%;
+      }
+      &Yelp {
+        top: -35px;
+        right: 10%;
+      }
+      &TrustRadius {
+        top: 50%;
+        right: 30px;
+      }
+      &Trip {
+        bottom: -10%;
+        left: 50%;
+      }
+      &Google {
+        top: -7%;
+        left: 5%;
+      }
+      &Airbnb {
+        top: 50%;
+        left: 5%;
+      }
+    }
+    h1 {
+      margin-bottom: 0.6389em;
+    }
+    p {
+      color: #fff;
+      font-size: 2.2rem;
+      line-height: 1.35;
+      margin-bottom: 0;
+      padding: 0 1.25em;
+    }
+  }
+  .imageWrapper {
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    margin-right: 10px;
+    .imageRadius {
+      border-radius: 6px;
+      overflow: hidden;
+      line-height: 0;
+      position: relative;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 6px;
+      width: 100%;
+      height: 100%;
+      top: -10px;
+      right: -10px;
+      border: 1px solid #fff;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .aboutHero {
+    padding: 72px 0 76px;
+    display: flex;
+    align-items: center;
+    :global(.container) {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      .content {
+        flex: 1 1 60%;
+        text-align: left;
+        margin: 0;
+        h1 {
+          text-align: left;
+          font-size: 4.4rem;
+        }
+        p {
+          padding: 0 10% 0 0;
+        }
+      }
+      .imageWrapper {
+        flex: 1 1 40%;
+      }
+    }
+  }
+}

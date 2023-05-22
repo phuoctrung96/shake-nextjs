@@ -1,0 +1,85 @@
+.meetShakeWrapper {
+  padding: 3.75em 0;
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.533;
+    margin: 0;
+  }
+  .content {
+    margin-bottom: 2.5em;
+    p {
+      padding: 0 1.333em;
+    }
+  }
+  .imageSection {
+    p {
+      text-align: right;
+      margin-top: 0.4667em;
+      font-size: 1.3rem;
+      line-height: 2.2308;
+      font-weight: 600;
+    }
+  }
+  .imageWrapper {
+    padding: 3px;
+    background-color: var(--green);
+    line-height: 0;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: 767px) {
+  .meetShakeWrapper {
+    padding-bottom: 4.375em;
+    .container {
+      display: flex;
+      > div {
+        flex: 1 1 calc(50% - 0.90625em);
+      }
+      .content {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2,
+        p {
+          text-align: left;
+        }
+        h2 {
+          font-size: 3.4rem;
+          line-height: 1.35;
+          margin-bottom: 0.3529em;
+        }
+        p {
+          font-size: 1.8rem;
+          padding: 0;
+        }
+      }
+      .imageSection {
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .meetShakeWrapper {
+    .container {
+      > div {
+      }
+      .content {
+        padding-right: 3%;
+        h2 {
+          font-size: 4.8rem;
+        }
+        p {
+          font-size: 2rem;
+          line-height: 1.45;
+        }
+      }
+    }
+  }
+}

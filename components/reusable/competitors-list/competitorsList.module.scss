@@ -1,0 +1,133 @@
+.outerWrapper {
+  position: relative;
+  .desktopOnly {
+    display: none;
+  }
+  .listWrapper {
+    overflow-x: auto;
+    table {
+      width: 100%;
+      border-spacing: 0;
+      thead {
+        tr {
+          text-align: left;
+          color: #66717e;
+          th {
+            padding: 12px 0;
+            border-bottom: 1px solid #d9d9d9;
+            font-weight: 400;
+          }
+        }
+      }
+      tr {
+        &:last-child td {
+          border-bottom: none;
+        }
+      }
+      .reviews,
+      .rating,
+      .category,
+      .rank {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .site {
+        width: 100%;
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          > div {
+            flex: 0 0 26px;
+          }
+          &:hover,
+          &:focus {
+            color: var(--blue);
+          }
+        }
+        span {
+          word-break: break-word;
+        }
+      }
+      .rating {
+        font-weight: 600;
+        > div {
+          margin-left: 0.764375em;
+        }
+      }
+      .category {
+        color: var(--dark-blue);
+      }
+      td {
+        padding: 14px 0;
+        border-bottom: 1px solid #d9d9d9;
+
+        > div {
+          align-items: center;
+          .siteLogo {
+            margin-right: 0.75em;
+          }
+        }
+      }
+    }
+    .cta {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      min-height: 250px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.57) 34.37%,
+        #ffffff 83.83%
+      );
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .outerWrapper {
+    .listWrapper {
+      table {
+        .reviews,
+        .rating,
+        .category,
+        .rank {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .site {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .outerWrapper {
+    .mobileOnly {
+      display: none;
+    }
+    .desktopOnly {
+      display: table-cell;
+    }
+    .listWrapper {
+      table {
+        .site {
+          width: auto;
+          span {
+            display: inline;
+          }
+        }
+        td {
+          > div {
+            display: inline-flex;
+          }
+        }
+      }
+    }
+  }
+}

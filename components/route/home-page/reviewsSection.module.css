@@ -1,0 +1,54 @@
+.testimonials {
+  padding: 3.75em 0;
+}
+
+.testimonials h2 {
+  margin-bottom: 1.7931em;
+}
+
+.reviews {
+  max-height: 450px;
+  scrollbar-color: #25e85f transparent;
+  scrollbar-width: thin;
+  overflow-y: scroll;
+}
+
+.reviews::-webkit-scrollbar {
+  width: 8px;
+  height: 100%;
+}
+
+.reviews::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reviews::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 4px;
+}
+
+.reviews::-webkit-scrollbar-button {
+  background: transparent;
+  height: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials {
+    padding: 48px 0 40px;
+  }
+
+  .testimonials h2 {
+    margin-bottom: 1.471em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .testimonials {
+    padding: 6.875em 0 4.375em;
+  }
+
+  .testimonials h2 {
+    margin-bottom: 1.1111em;
+    line-height: 1.1852em;
+  }
+}

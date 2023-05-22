@@ -1,0 +1,13 @@
+.logo {
+  font-size: 0;
+}
+
+.logoWrapper {
+  width: 72px;
+}
+
+@media (min-width: 1024px) {
+  .logoWrapper {
+    width: 96px;
+  }
+}

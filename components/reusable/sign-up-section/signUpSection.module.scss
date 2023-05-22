@@ -1,0 +1,63 @@
+.signUpSectionWrapper {
+  background-color: var(--black-bg);
+  padding: 3.75em 0;
+  text-align: center;
+  h2,
+  p {
+    color: #fff;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 0.5833em;
+  }
+  p {
+    font-size: 2rem;
+    line-height: 1.35;
+    margin-bottom: 2.65em;
+  }
+  .signUpBtn {
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 767px) {
+  .signUpSectionWrapper {
+    padding: 5.625em 0;
+    text-align: left;
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        flex: 1 1 100%;
+        max-width: 66%;
+      }
+      button {
+        flex: 1 1 30%;
+        max-width: 200px;
+      }
+    }
+    h2,
+    p {
+      text-align: left;
+    }
+    p {
+      opacity: 0.8;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .signUpSectionWrapper {
+    p {
+      font-size: 2.2rem;
+      line-height: 1.4545;
+    }
+    > div {
+      > div {
+        max-width: 750px;
+      }
+    }
+  }
+}

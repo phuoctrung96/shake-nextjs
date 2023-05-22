@@ -1,0 +1,404 @@
+.mainHero {
+  background-color: #1c1d21;
+  position: relative;
+  height: 100%;
+  padding-top: 92px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  .starsWrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    .star {
+      position: absolute;
+      display: none;
+      &.starSize {
+        &S {
+          width: 2px;
+        }
+        &M {
+          width: 3px;
+        }
+        &L {
+          width: 4px;
+        }
+      }
+      &0 {
+        display: block;
+        top: 10%;
+        left: 50%;
+      }
+      &1 {
+        display: block;
+        top: 13%;
+        left: 35%;
+      }
+      &2 {
+        display: block;
+        top: 11%;
+        left: 5%;
+      }
+      &3 {
+        display: block;
+        top: 5%;
+        left: 45%;
+      }
+      &4 {
+        display: block;
+        top: 7%;
+        right: 30%;
+      }
+      &5 {
+        display: block;
+        top: 8%;
+        left: 20%;
+      }
+      &7 {
+        display: block;
+        top: 10%;
+        right: 10%;
+      }
+    }
+  }
+  h1 {
+    margin-bottom: 0.6667em;
+    font-size: 2.5rem;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+  .content {
+    color: #fff;
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1.35;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 0.9091em;
+    margin-bottom: 2.5454em;
+    max-width: 500px;
+  }
+
+  .tryCompanies {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 3em 0;
+    width: 100%;
+    svg {
+      margin-right: 0.4667em;
+    }
+    .imageTagsWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .imageTag {
+        display: flex;
+        align-items: center;
+        background-color: #333335;
+        padding: 0.4375em 0.75em;
+        border-radius: 40px;
+        border: 1px solid #333335;
+        margin-right: 0.625em;
+        margin-bottom: 0.625em;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover,
+        &:focus {
+          border: 1px solid #66717e;
+        }
+        a {
+          display: flex;
+        }
+        p {
+          color: #fff;
+          font-size: 1.5rem;
+          line-height: 1.3333;
+          margin-left: 0.6em;
+          margin: 0 0 0 0.4667em;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+    > p {
+      display: flex;
+      align-items: center;
+      color: #66717e;
+      font-size: 1.5rem;
+      line-height: 1.35;
+      margin: 0 0 1em;
+    }
+  }
+
+  .globeWrapper,
+  :global(.container) {
+    flex: 1 1 100%;
+  }
+
+  :global(.container) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      align-items: center;
+      margin-top: 5%;
+      z-index: 2;
+    }
+  }
+  .globeWrapper {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -45%;
+    z-index: 1;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .mainHero {
+    h1 {
+      font-size: 2.9rem;
+    }
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .mainHero {
+    h1 {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .mainHero {
+    h1 {
+      font-size: 3.6rem;
+      padding: 0 20%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mainHero {
+    padding: 104px 0 0;
+    flex-direction: row;
+    align-items: center;
+    height: 80vh;
+    .noOverflow {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: all;
+      canvas {
+        touch-action: pan-y !important;
+      }
+    }
+    h1,
+    .content {
+      text-align: left;
+    }
+    h1 {
+      font-size: 4.4rem;
+      margin-bottom: 0.4091em;
+      padding: 0;
+    }
+    .content {
+      padding: 0;
+      font-size: 2rem;
+      margin-bottom: 2.4em;
+    }
+
+    .tryCompanies {
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 1.4667em 0 0;
+      align-items: flex-start;
+      .imageTagsWrapper {
+        margin-top: 1em;
+        .imageTag {
+          margin-bottom: 0;
+        }
+      }
+      > p {
+        margin: 0 1em 0 0;
+      }
+    }
+
+    :global(.container) {
+      height: 100%;
+      flex-direction: row;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      > div {
+        flex: 1 1 66%;
+        max-width: 66%;
+        align-items: flex-start;
+        height: auto;
+        margin-top: 0;
+      }
+    }
+    .globeWrapper {
+      width: max-content;
+      max-width: unset;
+      display: block;
+      right: -50%;
+      left: unset;
+      top: 10%;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mainHero {
+    height: 90vh;
+    .starsWrapper {
+      .star {
+        display: block;
+        &1 {
+          left: 15%;
+          top: 30%;
+        }
+        &2 {
+          top: 12%;
+          left: 17%;
+        }
+        &3 {
+          top: 23%;
+          left: 20%;
+        }
+        &4 {
+          top: 31%;
+          left: 24%;
+        }
+        &5 {
+          top: 27%;
+          left: 5%;
+        }
+        &6 {
+          top: 8%;
+          left: 26%;
+        }
+        &7 {
+          top: 15%;
+          left: 31%;
+        }
+        &8 {
+          top: 20%;
+          left: 35%;
+        }
+        &9 {
+          top: 6%;
+          left: 37%;
+        }
+        &10 {
+          top: 22%;
+          left: 40%;
+        }
+        &11 {
+          top: 16%;
+          left: 42%;
+        }
+        &12 {
+          top: 4%;
+          left: 46%;
+        }
+        &13 {
+          top: 15%;
+          left: 48%;
+        }
+        &14 {
+          top: 25%;
+          left: 50%;
+        }
+        &15 {
+          top: 13%;
+          left: 55%;
+        }
+        &16 {
+          top: 20%;
+          left: 57%;
+        }
+        &17 {
+          top: 11%;
+          left: 63%;
+        }
+        &18 {
+          top: 17%;
+          left: 65%;
+        }
+        &19 {
+          top: 15%;
+          left: 72%;
+        }
+        &20 {
+          top: 20%;
+          left: 75%;
+        }
+        &21 {
+          top: 12%;
+          left: 79%;
+        }
+        &22 {
+          top: 19%;
+          left: 85%;
+        }
+        &23 {
+          top: 11%;
+          left: 90%;
+        }
+        &24 {
+          top: 9%;
+          left: 95%;
+        }
+        &25 {
+          top: 17%;
+          left: 98%;
+        }
+      }
+    }
+
+    .tryCompanies {
+      flex-direction: row;
+      align-items: center;
+      > p {
+        margin: 0 1em 0 0;
+      }
+      .imageTagsWrapper {
+        margin-top: 0;
+      }
+    }
+
+    h1 {
+      font-size: 6.4rem;
+    }
+    .content {
+      padding-right: 30%;
+      max-width: unset;
+    }
+    .globeWrapper {
+      top: 0;
+      left: 48%;
+    }
+  }
+}

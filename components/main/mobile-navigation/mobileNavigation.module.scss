@@ -1,0 +1,89 @@
+.mobileNavWrapper {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 9px 0 rgb(4 4 43 / 6%);
+  border-radius: 0 0 15px 15px;
+  z-index: 3;
+  padding: 1.8125em 1.875em 0;
+  animation: openMenuAnimation 0.3s ease;
+  .logoWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.875em;
+    .logo {
+      width: 82px;
+    }
+  }
+  .navigation {
+    width: 100%;
+    margin-bottom: 2em;
+    text-align: center;
+    > ul {
+      align-items: center;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0.3125em 0 1.625em;
+      li {
+        text-align: right;
+        margin-bottom: 0.5em;
+        width: 100%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        > a,
+        button {
+          padding: 0.8333em 0.8889em 1em 0;
+          font-size: 2rem;
+          justify-content: flex-start;
+          line-height: 1.11111;
+          width: 100%;
+        }
+        button {
+          &:hover {
+            color: var(--black);
+          }
+          svg {
+            path {
+              fill: var(--black);
+            }
+          }
+        }
+      }
+    }
+    .signUpBtn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  &.close {
+    display: none;
+  }
+
+  &.open {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mobileNavWrapper {
+    display: none;
+  }
+}
+
+@keyframes openMenuAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

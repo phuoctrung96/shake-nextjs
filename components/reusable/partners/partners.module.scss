@@ -1,0 +1,45 @@
+.partnersWrapper {
+  background-color: #f6f6f6;
+}
+
+.logoContainer {
+  justify-content: space-around;
+  padding: 3.75em 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .logo {
+    flex: 1 1 33%;
+    max-width: 33%;
+    position: relative;
+    height: 52px;
+    padding: 0;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    > span {
+      height: 100% !important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    flex: 1 1 20% !important;
+    padding: 5.625em 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .logoContainer {
+    padding: 5em 0;
+    .logo {
+      height: 88px;
+    }
+  }
+}

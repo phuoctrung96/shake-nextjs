@@ -1,0 +1,81 @@
+.baseButton {
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  font-size: 1.8rem;
+  line-height: 1.35;
+  font-weight: 600;
+  width: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em;
+  color: var(--black);
+  svg {
+    margin-left: 0.51em;
+    path {
+      transition: fill 250ms ease-in-out;
+    }
+  }
+  &:hover,
+  &:focus {
+    color: #fff;
+    path {
+      fill: #fff;
+    }
+  }
+  &:disabled {
+    opacity: 0.5;
+    &:hover,
+    &:focus {
+      color: var(--black);
+      path {
+        fill: var(--black);
+      }
+    }
+    svg {
+      opacity: 0.5;
+    }
+    cursor: not-allowed;
+  }
+  &.primary {
+    background-color: var(--green);
+    border: none;
+    border-radius: 6px;
+    height: 53px;
+    &:hover,
+    &:focus {
+      box-shadow: 2px 2px 14px hsl(0deg 0% 100% / 25%);
+    }
+  }
+  &.secondary {
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    &:hover,
+    &:focus {
+      color: var(--black);
+      border-color: var(--black);
+      path {
+        fill: var(--black);
+      }
+    }
+  }
+  &.menu {
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    padding: 0;
+    font-size: 2rem;
+    line-height: 1.125;
+  }
+}
+
+@media (min-width: 767px) {
+  .baseButton {
+    &.menu {
+      font-size: 1.8rem;
+    }
+  }
+}

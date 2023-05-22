@@ -1,0 +1,80 @@
+.cardWrap {
+  height: 100%;
+  padding-bottom: 1.25em;
+  .card {
+    padding: 0.625em 0.625em 0.9375em;
+    background-color: #fff;
+    box-shadow: 2px 2px 19px rgb(10 29 77 / 3%);
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+    height: 100%;
+    .image {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      > div {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .body {
+      padding-top: 0.875em;
+      h3 {
+        color: #000003;
+        font-size: 1.6rem;
+        line-height: 1.175;
+        margin-bottom: 0.625em;
+      }
+      h4 {
+        font-size: 1.3rem;
+        line-height: 1.1746;
+        font-weight: 400;
+        color: var(--dark-blue);
+      }
+      .location {
+        font-size: 1.3rem;
+        line-height: 1.15385;
+        font-weight: 600;
+        color: #84849d;
+      }
+      .icon {
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        margin-right: 5px;
+        position: relative;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    max-height: 252px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cardWrap {
+    padding-bottom: 22px;
+  }
+
+  .card {
+    padding-bottom: 19px;
+  }
+
+  .body h3 {
+    font-size: 1.125rem;
+    line-height: 1.16667;
+  }
+
+  .body h4 {
+    font-size: 0.9375rem;
+    line-height: 1.13333;
+    font-weight: 400;
+  }
+}

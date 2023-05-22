@@ -1,0 +1,23 @@
+.chartsWrapper {
+  margin-bottom: 1.25em;
+  overflow: hidden;
+}
+
+@media (min-width: 767px) {
+  .chartsWrapper {
+    margin-bottom: 1.875em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .chartsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+    > div {
+      flex: 0 1 calc(50% - 0.9375em);
+      margin-bottom: 1.875em;
+    }
+  }
+}

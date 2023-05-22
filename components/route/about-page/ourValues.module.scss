@@ -1,0 +1,90 @@
+.faqWrapper {
+  padding: 3.75em 0 1.875em;
+  .sectionHeader {
+    margin-bottom: 3.75em;
+  }
+  .faqItem {
+    padding: 1.628em 0.3125em 1.875em 1.125em;
+    border-bottom: 0.0625rem solid var(--black);
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    .itemTitle {
+      font-size: 2.6rem;
+      line-height: 1.19231;
+      font-weight: 600;
+      margin-bottom: 0.9375rem;
+      color: var(--black);
+      position: relative;
+    }
+    .itemCount {
+      font-size: 1.6rem;
+      line-height: 1.1875;
+      font-weight: 600;
+      color: var(--darl-blue);
+      display: inline-block;
+      margin-right: 0.6875em;
+      position: absolute;
+      left: -1em;
+    }
+    .itemText {
+      font-size: 1.5rem;
+      line-height: 1.26667;
+      color: var(--dark-blue);
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .faqWrapper {
+    padding: 4.375em 0 3.1875em;
+    .sectionHeader {
+      margin-bottom: 3.125em;
+      p {
+        line-height: 1.5;
+      }
+    }
+    .faqItem {
+      display: flex;
+      align-items: flex-start;
+      min-height: 13rem;
+      padding-top: 1.875em;
+    }
+    .itemTitle {
+      margin-bottom: 0;
+      flex-basis: 50%;
+      padding-right: 1.25em;
+    }
+
+    .itemText {
+      flex-basis: 50%;
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .faqWrapper {
+    padding: 6.875rem 0 3.75rem;
+    .faqItem {
+      .sectionHeader {
+        margin-bottom: 3.75em;
+      }
+
+      .itemTitle {
+        font-size: 3.6rem;
+        line-height: 1.16667;
+      }
+
+      .itemText {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        padding-left: 1.2em;
+      }
+    }
+  }
+}

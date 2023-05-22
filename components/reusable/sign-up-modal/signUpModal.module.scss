@@ -1,0 +1,281 @@
+.modal {
+  .step {
+    display: none;
+    h2 {
+      flex: 1 1 100%;
+      width: 100%;
+      font-size: 1.6rem;
+      margin-top: 2.3125em;
+      margin-bottom: 1.68755em;
+    }
+    &.firstStep h2 {
+      margin-top: 0;
+    }
+    &.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .continueBtn {
+      align-self: flex-end;
+      width: 100%;
+      svg {
+        width: 8px;
+      }
+    }
+    ol {
+      padding: 0;
+      width: 100%;
+      display: grid;
+      grid-auto-rows: 1fr;
+      gap: 0.75em;
+      margin-bottom: 0.75em;
+      li {
+        &.selected {
+          button {
+            background-color: #fff;
+            color: var(--black);
+          }
+        }
+        button {
+          display: flex;
+          color: #fff;
+          background: rgba(255, 255, 255, 0.1);
+          border: none;
+          width: 100%;
+          font-size: 1.6rem;
+          line-height: 1.5;
+          font-weight: 600;
+          text-align: left;
+          padding: 1em 1.375em;
+          border: 2px solid #ffffff;
+          box-shadow: 2px 4px 13px rgba(0, 0, 3, 0.06);
+          border-radius: 6px;
+          height: 100%;
+          span {
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .results {
+    h2 {
+      font-size: 2.6rem;
+      text-align: center;
+      padding: 0 0.5em;
+      margin-bottom: 2.7308em;
+    }
+    a {
+      margin-bottom: 4px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .imageWr {
+      display: none;
+    }
+  }
+
+  .progressBarWr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin-top: 0.8125em;
+    progress {
+      flex: 0 1 70%;
+    }
+    p {
+      display: inline-flex;
+      flex: 0 1 20%;
+      margin: 0;
+      color: #66717e;
+      span {
+        color: #fff;
+        margin-right: 0.4em;
+      }
+    }
+  }
+}
+
+.signUpLinks a,
+.helpYouFormBtn {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 4px 13px rgba(0, 0, 3, 0.06);
+  border-radius: 6px;
+  transition: border 250ms ease-in-out;
+  cursor: pointer;
+  height: 66px;
+
+  &:hover,
+  &:focus {
+    border-color: #fff;
+  }
+}
+
+.signUpLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  a {
+    flex: 1 1 100%;
+    width: 100%;
+    align-items: center;
+    &:first-child {
+      margin-bottom: 1.125em;
+    }
+    .imageWr {
+      display: flex;
+      max-height: 1.9063em;
+    }
+    &:first-child {
+      .imageWr {
+        max-height: 2em;
+      }
+    }
+  }
+}
+
+.helpYouFormBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #848485;
+  margin-top: 1.125em;
+  font-size: 1.4rem;
+  span {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 0.3em;
+  }
+}
+
+@media (min-width: 767px) {
+  .modal {
+    .step {
+      display: none;
+
+      h2 {
+        font-size: 2.4rem;
+        line-height: 1.35;
+        margin-top: 1.2083em;
+        margin-bottom: 0.625em;
+      }
+      ol {
+        gap: 0.875em;
+
+        li {
+          button {
+            padding: 1.25em 1.375em;
+          }
+        }
+      }
+      .continueBtn {
+        width: auto;
+      }
+    }
+    .results {
+      .imageWr {
+        display: block;
+        margin-top: 3.625em;
+        height: 46px;
+      }
+      h2 {
+        font-size: 3.2rem;
+        line-height: 1.35;
+        padding: 0 1.5em;
+        margin-bottom: 2em;
+      }
+      .linksWr {
+        display: flex;
+        margin-bottom: 3.375em;
+        a {
+          &:first-child {
+            margin-right: 0.6667em;
+          }
+        }
+      }
+      a {
+        width: auto;
+        margin: 0;
+        padding: 0.7222em 2em;
+      }
+    }
+    .progressBarWr {
+      width: 100%;
+      max-width: 215px;
+    }
+  }
+  .signUpLinks {
+    flex-wrap: nowrap;
+    a {
+      flex: 1 1 50%;
+      height: 100px;
+      &:first-child {
+        margin-right: 1.5em;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .helpYouFormBtn {
+    font-size: 1.6rem;
+    margin-top: 1.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    > div {
+      padding: 1.5em !important;
+      max-width: 620px !important;
+    }
+    .firstStep {
+      h2 {
+        margin-bottom: 1em;
+      }
+    }
+    .step {
+      h2 {
+        font-size: 3.5rem;
+        margin-top: 1.0857em;
+        margin-bottom: 1.4em;
+      }
+      ol {
+        margin-bottom: 2.125em;
+        li {
+          button {
+            font-size: 1.8rem;
+            line-height: 1.35;
+            padding: 1.3333em;
+          }
+        }
+      }
+    }
+    .helpYouFormBtn {
+      margin-top: 0.7778em;
+      font-size: 1.8rem;
+    }
+  }
+  .signUpLinks {
+    a {
+      &:first-child {
+        margin-right: 1em;
+      }
+      .imageWr {
+        max-height: 2.5em;
+      }
+      .imageWr:first-child {
+        max-height: 2.8125em;
+      }
+    }
+  }
+}

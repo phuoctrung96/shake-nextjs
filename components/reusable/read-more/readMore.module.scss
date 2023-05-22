@@ -1,0 +1,15 @@
+.readMoreWrapper {
+  .readMore {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  button {
+    color: var(--blue);
+    &:focus {
+      color: var(--blue);
+    }
+    &:hover {
+      color: var(--blue-hover);
+    }
+  }
+}

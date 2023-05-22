@@ -1,0 +1,16 @@
+.container {
+  padding: 0 2rem;
+  max-width: 754px;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: calc(100% - 100px);
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .container {
+    max-width: 1230px;
+  }
+}

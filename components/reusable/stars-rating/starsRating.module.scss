@@ -1,0 +1,25 @@
+.starsRatingWrapper {
+  display: flex;
+  position: relative;
+  width: 108px;
+  svg {
+    width: 16px;
+    fill: #ffa630;
+  }
+  .iconWr {
+    margin-right: 7px;
+    position: relative;
+    width: 16px;
+    height: 14.2px;
+  }
+  .emptyStars,
+  .fullStars {
+    display: flex;
+  }
+  .fullStars {
+    position: absolute;
+    svg {
+      position: absolute;
+    }
+  }
+}

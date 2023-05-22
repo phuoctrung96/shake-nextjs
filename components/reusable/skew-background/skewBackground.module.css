@@ -1,0 +1,34 @@
+.backgroundWrapper {
+  padding: 60px 0 0;
+  position: relative;
+  background: linear-gradient(180deg, #fff 0, #f6f6f6 100%);
+}
+
+.background {
+  position: absolute;
+  width: calc(100% + 9px);
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: -4.5px;
+  background: linear-gradient(180deg, #fff 0, #f6f6f6 100%);
+  transform: rotate(-7deg) skew(-7deg, 0deg);
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .backgroundWrapper {
+    padding: 138px 0 36px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .backgroundWrapper {
+    padding: 13% 0 7%;
+    background: 0 0;
+  }
+
+  .background {
+    display: block;
+  }
+}

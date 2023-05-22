@@ -1,0 +1,29 @@
+.blurLinkWrapper {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &.blur3 {
+    backdrop-filter: blur(3px);
+  }
+  &.blur6 {
+    backdrop-filter: blur(6px);
+  }
+  &.blur7 {
+    backdrop-filter: blur(7px);
+  }
+  .blurLink {
+    height: 51px;
+    padding: 0 36px;
+    max-width: unset;
+    width: max-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

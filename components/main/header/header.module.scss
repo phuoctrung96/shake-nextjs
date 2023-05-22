@@ -1,0 +1,52 @@
+.header {
+  padding: 29px 0;
+  background-color: transparent;
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  &.dark {
+    background-color: var(--black-bg);
+    position: static;
+  }
+  :global(.container) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      flex-basis: 82px;
+      cursor: pointer;
+    }
+    > div:first-child {
+      display: flex;
+    }
+  }
+
+  .beta {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    align-self: center;
+    justify-self: flex-start;
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #1a4429;
+    padding: 6px 9px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .openMenuButton {
+    display: none;
+  }
+  .header {
+    padding: 35px 0;
+    .logo {
+      flex-basis: 116px;
+    }
+  }
+}

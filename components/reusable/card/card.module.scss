@@ -1,0 +1,129 @@
+.cardWrapper {
+  border-radius: 6px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 9, 0.02);
+  border: 2px solid #dfdfdf;
+  background: #ffffff;
+  padding: 1em;
+  margin-bottom: 1.25em;
+  position: relative;
+
+  &.borderColor {
+    &-blue {
+      border-color: var(--blue);
+    }
+    &-red {
+      border-color: var(--red);
+    }
+    &-orange {
+      border-color: var(--orange);
+    }
+  }
+  .logoWrapper {
+    display: flex;
+    justify-content: flex-start;
+    img {
+      max-height: 44px;
+      width: 44px;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 1.9rem;
+    line-height: 1.3636;
+    margin-bottom: 0.2632em;
+    margin-top: 0;
+    &.mainCard {
+      font-size: 2.2rem;
+      margin-bottom: 0.3636em;
+    }
+  }
+  .description {
+    font-size: 1.4rem;
+    line-height: 1.5714;
+    color: #66717e;
+    &.mainCard {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      color: var(--dark-blue);
+    }
+  }
+  hr {
+    border-top: 1px solid #dfdfdf;
+    margin: 1.6rem 0;
+  }
+  .topBorder {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 3px 3px 0 0;
+    &-blue {
+      background-color: var(--blue);
+    }
+    &-orange {
+      background-color: var(--orange);
+    }
+    &-red {
+      background-color: var(--red);
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .cardWrapper {
+    padding: 1.5625em 1em;
+    margin-bottom: 1.875em;
+    .logoWrapper {
+      img {
+        max-height: 36px;
+        width: 36px;
+      }
+    }
+    .title {
+      &.mainCard {
+        font-size: 1.9rem;
+      }
+    }
+    .description {
+      &.mainCard {
+        font-size: 1.6rem;
+        line-height: 1.6875;
+      }
+    }
+    .topBorder {
+      height: 8px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardWrapper {
+    padding: 1.5em;
+    .logoWrapper {
+      img {
+        margin-bottom: 1.5em;
+        max-height: 66px;
+        width: 66px;
+      }
+    }
+    .title {
+      &.mainCard {
+        font-size: 2.2rem;
+      }
+    }
+    .description {
+      &.mainCard {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-bottom: 1.3333em;
+      }
+    }
+    hr {
+      margin-bottom: 1.5em;
+    }
+  }
+}

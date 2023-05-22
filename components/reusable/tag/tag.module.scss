@@ -1,0 +1,12 @@
+.tag {
+  background-color: #dbdae2;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  color: var(--dark-blue);
+  padding: 0.4286em 1em;
+  border-radius: 50px;
+  max-width: 161px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

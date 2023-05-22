@@ -1,0 +1,53 @@
+.service {
+  text-align: center;
+}
+
+.logo {
+  margin: 0 auto 12px;
+  width: 184px;
+  height: auto;
+}
+
+.service p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 2.125em;
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    max-width: 602px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .service p {
+    font-size: 0.9375rem;
+    line-height: 1.26667;
+    margin-bottom: 2.2em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .service {
+    text-align: left;
+    padding-top: 97px;
+    margin-right: 0;
+    max-width: 428px;
+  }
+
+  .logo {
+    width: 238px;
+    margin: 0 0 14px;
+  }
+
+  .service p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+  }
+}

@@ -1,0 +1,25 @@
+.socialMedia {
+  margin-left: auto;
+}
+
+.socialMedia ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.25rem;
+}
+
+.socialMedia ul li a {
+  display: inline-flex;
+  background-color: var(--gray);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.socialMedia ul li a:hover {
+  background-color: var(--dark-gray);
+}

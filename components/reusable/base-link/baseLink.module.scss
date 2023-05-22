@@ -1,0 +1,70 @@
+.link {
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.125;
+  transition: 0.3s ease-in-out;
+}
+
+.primary,
+.secondary {
+  display: block;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  padding: 0.765em 2.125em;
+  border-radius: 6px;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 100%;
+  border: 2px solid var(--green);
+}
+
+.primary {
+  background-color: var(--green);
+  color: var(--black);
+
+  &:focus,
+  &:hover {
+    color: #fff;
+  }
+}
+
+.secondary {
+  color: var(--green);
+
+  &:focus,
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+.menu {
+  color: var(--black);
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+@media screen and (min-width: 576px) {
+  .primary {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .primary,
+  .secondary {
+    padding: 0.8889em 2.25em 0.8889em;
+    line-height: 1.333;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .primary,
+  .secondary {
+    padding: 0.7222em 2.25em 0.7778em;
+    line-height: 1.333;
+  }
+}
